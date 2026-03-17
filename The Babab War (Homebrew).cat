@@ -900,11 +900,30 @@
             <condition type="atLeast" value="1" field="selections" scope="force" childId="14f6-d065-6547-2032" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="add" value="Fire Angels Terminators are 0-1 Terminator Squad or Assault Terminator Squad." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="aeb4-ef07-abce-03ec" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="ae28-4205-b154-1e6d" shared="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="1cf2-c3a5-7794-1fb2" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="1" field="632f-b821-b9fc-d39b">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="ae28-4205-b154-1e6d" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <comment>Elite</comment>
       <entryLinks>
         <entryLink import="true" name="Sons of Medusa Bionics" hidden="false" id="5a3b-5aab-c6c5-3af8" type="selectionEntry" targetId="adf5-d47a-65d0-6548" sortIndex="1"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="632f-b821-b9fc-d39b"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Terminator Assault Squad" hidden="true" id="1cf2-c3a5-7794-1fb2" type="selectionEntry" targetId="4e6a-bed3-e270-b411">
       <modifiers>
@@ -1006,11 +1025,30 @@
             <condition type="atLeast" value="1" field="selections" scope="force" childId="14f6-d065-6547-2032" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="add" value="Fire Angels Terminators are 0-1 Terminator Squad or Assault Terminator Squad." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="aeb4-ef07-abce-03ec" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="ae28-4205-b154-1e6d" shared="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="1cf2-c3a5-7794-1fb2" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="1" field="1dac-f4d5-89d5-6ca1">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="ae28-4205-b154-1e6d" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <comment>Elite</comment>
       <entryLinks>
         <entryLink import="true" name="Sons of Medusa Bionics" hidden="false" id="b9c4-8d5c-1e3f-3f5d" type="selectionEntry" targetId="adf5-d47a-65d0-6548" sortIndex="1"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="1dac-f4d5-89d5-6ca1"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Dreadnought" hidden="true" id="ee60-11b4-855a-749a" type="selectionEntry" targetId="3f7e-ad94-b024-1a57">
       <modifiers>
@@ -1117,6 +1155,11 @@
             <condition type="instanceOf" value="1" field="selections" scope="self" childId="ef26-a921-d2ef-db29" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="1" field="e1a8-d8f2-2e62-9686">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="ae28-4205-b154-1e6d" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <comment>Elite</comment>
       <categoryLinks>
@@ -1125,6 +1168,9 @@
       <entryLinks>
         <entryLink import="true" name="War Relic" hidden="false" id="0288-d4d0-1049-7b9b" type="selectionEntry" targetId="17e8-f4df-fdf0-5382" sortIndex="2"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="e1a8-d8f2-2e62-9686"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Space Marine Veteran Squad" hidden="true" id="2a27-15bc-cd2e-b5cb" type="selectionEntry" targetId="9003-88bd-bc93-1355">
       <modifiers>
@@ -2751,6 +2797,22 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="1" field="661d-186a-9388-0356">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="ae28-4205-b154-1e6d" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Fire Angels may only have 0-1 Land Raider OR Land Raider Crusader " field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="c982-b62d-bd6b-a482" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="ae28-4205-b154-1e6d" shared="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="1f02-23c7-3ff1-4b3a" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink targetId="aacb-8a81-62c0-3db8" id="ec0e-84e8-5758-dc2d" primary="true" name="Heavy Support"/>
@@ -2781,6 +2843,7 @@
                 <condition type="atLeast" value="1" field="selections" scope="force" childId="a439-03a8-2553-7f46" shared="true" includeChildSelections="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="force" childId="456d-30eb-0bc1-352f" shared="true" includeChildSelections="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="force" childId="14f6-d065-6547-2032" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="bb44-22a2-f3b8-e4e3" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -2910,6 +2973,17 @@
               <conditions>
                 <condition type="greaterThan" value="0" field="selections" scope="force" childId="c982-b62d-bd6b-a482" shared="true" includeChildSelections="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="self" childId="f1a1-0c19-d0b9-00bd" shared="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="1f02-23c7-3ff1-4b3a" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" value="Fire Angels may only have 0-1 Land Raider OR Land Raider Crusader " field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="c982-b62d-bd6b-a482" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="ae28-4205-b154-1e6d" shared="true"/>
                 <condition type="greaterThan" value="0" field="selections" scope="force" childId="1f02-23c7-3ff1-4b3a" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
@@ -3474,6 +3548,11 @@
         <modifier type="add" value="80a0-9a53-e345-0687" field="category">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="14f6-d065-6547-2032" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="1" field="5d41-38d0-6958-5e0e">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="6bdd-c8cd-b4ab-c29c" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4608,6 +4687,24 @@
         </modifier>
       </modifiers>
     </entryLink>
+    <entryLink import="true" name="Fire Angels Extra Predator" hidden="false" id="125c-a717-46ea-aa31" type="selectionEntry" targetId="8137-1d78-ab5a-579b">
+      <modifiers>
+        <modifier type="add" value="ae28-4205-b154-1e6d" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="bb44-22a2-f3b8-e4e3" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="bb44-22a2-f3b8-e4e3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Astral Claws Corpse-Taker Apothecary Section" hidden="false" id="6a93-7193-97bc-f312">
@@ -4692,11 +4789,123 @@
       <categoryLinks>
         <categoryLink targetId="6d25-b346-c314-6911" id="d284-a0bb-af9c-cfec" primary="true" name="Elites"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Techmarine" hidden="false" id="8a17-88d4-c890-0966">
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="45e6-bb5f-a1c2-5bd7"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="65"/>
+          </costs>
+          <categoryLinks>
+            <categoryLink targetId="2e99-a0cf-9812-b860" id="0a8d-9a12-8a73-5c3b" primary="false" name="Techmarine"/>
+            <categoryLink targetId="3c96-248b-affd-e504" id="9f50-91d9-8533-e492" primary="false" name="Independent Character"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Boltgun" id="65d5-c796-c103-b0bc" hidden="false" type="profile" targetId="60bf-18fd-f6e6-6eb4"/>
+            <infoLink name="Signum" id="be05-881b-317c-a822" hidden="false" type="rule" targetId="9ba6-c94b-3548-d9e8"/>
+            <infoLink name="Servo-Arm" id="2927-1310-e2fb-8d60" hidden="false" type="profile" targetId="424f-b4b1-2884-2086"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Techmarine" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="e2d7-455e-14ed-ce26">
+              <characteristics>
+                <characteristic name="WS" typeId="c704-6128-f143-935a">4</characteristic>
+                <characteristic name="BS" typeId="7928-3a9b-6080-ed95">4</characteristic>
+                <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
+                <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
+                <characteristic name="W" typeId="4dc2-c603-0bc5-0561">1</characteristic>
+                <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+                <characteristic name="A" typeId="abbf-0d11-fd86-d938">1</characteristic>
+                <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
+                <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Space Marine Armory" hidden="false" id="9c69-aa75-6dba-5ae4" type="selectionEntryGroup" targetId="bfc9-22b8-1379-3112"/>
+          </entryLinks>
+          <rules>
+            <rule name="Attached Deployment" id="c60c-f117-8190-511d" hidden="false">
+              <description>Each Independent Techmarine must be assigned to a unit of non-jump pack infantry before the battle beings. He may not purchase a Jump Pack. If there is a Space Marine Bike Squadron or Attack Bike Squadron included in the army he may purchase a Space Marine Bike, but must be attached to one of those instead.</description>
+            </rule>
+            <rule name="Armoured Support" id="ebbd-e56e-1781-2754" hidden="false">
+              <description>The Independent Techmarine may attempt to repair a Space Marine Vehicle with his servo-arm, even if he is being transported within it. It will repair an immobilized vehicle on a 5 or 6.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="dfed-3c04-65c2-9be8" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Captain Tarnus Vale" hidden="false" id="93d8-b0db-47d2-28af">
       <categoryLinks>
         <categoryLink targetId="a8a7-7a4b-5f7e-2138" id="ecbd-c65c-598f-8702" primary="true" name="HQ"/>
       </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Retinue" id="410f-033f-6be7-501f" hidden="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4971-0cb6-8ba0-c3fb"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Command Squad" hidden="false" id="9ae7-8085-de7c-a279" type="selectionEntry" targetId="bc53-c50d-f840-ebaa"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Tarnus Vale" hidden="false" id="8a37-dff7-52e2-f5d0">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6c61-b165-28ad-03a2-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6c61-b165-28ad-03a2-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Tarnus Vale" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="442f-dd26-33f8-64e8">
+              <characteristics>
+                <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
+                <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
+                <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
+                <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
+                <characteristic name="W" typeId="4dc2-c603-0bc5-0561">2</characteristic>
+                <characteristic name="I" typeId="eeda-4fb4-901e-b70d">5</characteristic>
+                <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
+                <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
+                <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Close Combat Weapon" id="7a17-65a1-a9b7-520f" hidden="false" type="profile" targetId="46d5-85f2-d932-f0a2">
+              <modifiers>
+                <modifier type="set" value="Master-Crafted Close Combat Weapon" field="name"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Plasma Pistol" id="a08e-9429-1390-6c46" hidden="false" type="profile" targetId="7b91-b670-d042-7c88"/>
+            <infoLink name="Iron Halo" id="09df-b87e-13a4-2400" hidden="false" type="rule" targetId="c214-19e6-edea-0f81"/>
+            <infoLink name="Melta Bombs" id="bcbd-7322-5bbf-4789" hidden="false" type="profile" targetId="87d0-8c40-7bcb-8cbb"/>
+            <infoLink name="Krak Grenades" id="4381-a90b-9e8c-95fa" hidden="false" type="profile" targetId="9c1b-bf93-059b-27f5"/>
+            <infoLink name="Frag Grenades" id="34ca-ce3c-f144-e1e9" hidden="false" type="profile" targetId="9dd4-e950-2419-5934"/>
+            <infoLink name="Purity Seals" id="73d8-02c7-73d9-ebff" hidden="false" type="rule" targetId="8fca-253c-bbf8-9510"/>
+            <infoLink name="Independent Character" id="c4f3-75cb-ae5d-aa41" hidden="false" type="rule" targetId="4a60-7f7e-c37f-a4d6"/>
+          </infoLinks>
+          <rules>
+            <rule name="Master Gunner" id="e4d5-4f30-ac87-0e3a" hidden="false">
+              <description>Any vehicle that is transporting Captain Vale counts as BS5 while he is onboard.</description>
+            </rule>
+            <rule name="Unstoppable Advance" id="bcf9-f226-c979-9964" hidden="false">
+              <description>If any tank within 12&quot; of Captain Vale (or the vehicle he is being transported in) receives an immobilized result on the vehicle damage table, they may force the opponent to re-roll it. The second result must be taken, even if it is worse.</description>
+            </rule>
+            <rule name="Armoured Support" id="8ab3-0c5c-8cf6-2b5e" hidden="false">
+              <description>If any Techmarines are in Captain Vale&apos;s command squad they receive the Armoured Support rule.
+
+
+The Techmarine may attempt to repair a Space Marine Vehicle with his servo-arm, even if he is being transported within it. It will repair an immobilized vehicle on a 5 or 6.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="145"/>
+      </costs>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Raptors Veteran Scouts" hidden="false" id="1298-d06e-75f8-0ab4">
       <categoryLinks>
@@ -6872,6 +7081,31 @@ If a model with this rule loses its final wound, roll a dice. On a 1, 2 or 3 rem
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc9f-e6f5-2f82-076d"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Fire Angels Extra Predator" hidden="false" id="8137-1d78-ab5a-579b">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="18be-a363-597e-7ec0" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Predator" id="2acb-a0f2-484c-bc89" hidden="false" defaultSelectionEntryId="none">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6a7d-66be-51b6-fd6c-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a7d-66be-51b6-fd6c-max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Predator Annihilator" hidden="false" id="809f-683e-09bb-028c" type="selectionEntry" targetId="75b1-7506-f196-951d">
+              <modifiers>
+                <modifier type="remove" value="aacb-8a81-62c0-3db8" field="category"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Predator Destructor" hidden="false" id="6d20-6310-eb64-82a3" type="selectionEntry" targetId="156e-b697-5422-38ff">
+              <modifiers>
+                <modifier type="remove" value="aacb-8a81-62c0-3db8" field="category"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>
