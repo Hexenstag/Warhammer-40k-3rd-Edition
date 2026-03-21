@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="e2b4-3c55-5ca1-3f39" name="The Badab War (Homebrew)" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="7" revision="2" authorUrl="https://drive.google.com/file/d/1eqFeEO-WrMVzMxg-0bsc7G0MGgaLF3jf/view?usp=sharing" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="e2b4-3c55-5ca1-3f39" name="The Badab War (Homebrew)" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="7" revision="3" authorUrl="https://drive.google.com/file/d/1eqFeEO-WrMVzMxg-0bsc7G0MGgaLF3jf/view?usp=sharing" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Space Marines (1999)" id="c493-cd8d-5ede-c7c9" targetId="9d6b-d195-877e-09cb"/>
     <catalogueLink type="catalogue" name="Blood Angels (1998)" id="9817-8303-12a8-7269" targetId="0e77-e514-f572-9f22"/>
@@ -351,15 +351,6 @@
             <modifier type="set" value="true" field="hidden">
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="058a-e77a-e4a4-a523" shared="true" includeChildSelections="false"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Red Scorpions Honour Guard" hidden="false" id="60ea-437e-2dd3-ca6f" type="selectionEntry" targetId="1ee9-959f-be8c-48eb" sortIndex="4">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="3fb6-a855-466f-b770" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4976,7 +4967,7 @@
               <modifiers>
                 <modifier type="set" value="0" field="6049-5fc5-20d2-49e9">
                   <conditions>
-                    <condition type="greaterThan" value="5" field="selections" scope="parent" childId="faa2-3c85-df57-e7e5" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="greaterThan" value="5" field="selections" scope="parent" childId="model" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </conditions>
                 </modifier>
                 <modifier type="set" value="true" field="hidden">
@@ -4993,7 +4984,7 @@
               <modifiers>
                 <modifier type="set" value="0" field="7b79-f2b9-67e3-5103">
                   <conditions>
-                    <condition type="greaterThan" value="9" field="selections" scope="parent" childId="faa2-3c85-df57-e7e5" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="greaterThan" value="9" field="selections" scope="parent" childId="model" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -5005,7 +4996,7 @@
               <modifiers>
                 <modifier type="set" value="0" field="a706-37e1-915a-63ba">
                   <conditions>
-                    <condition type="greaterThan" value="5" field="selections" scope="parent" childId="faa2-3c85-df57-e7e5" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="greaterThan" value="5" field="selections" scope="parent" childId="model" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -5017,7 +5008,7 @@
               <modifiers>
                 <modifier type="set" value="0" field="97b1-e3b4-c2f5-0f3c">
                   <conditions>
-                    <condition type="greaterThan" value="4" field="selections" scope="parent" childId="faa2-3c85-df57-e7e5" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="greaterThan" value="4" field="selections" scope="parent" childId="model" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </conditions>
                 </modifier>
                 <modifier type="set" value="true" field="hidden">
@@ -5063,7 +5054,7 @@
       </constraints>
       <rules>
         <rule name="Hellfire Rounds" id="95c6-b377-6caa-08f2" hidden="false">
-          <description>All Anphelion Veterans are equipped with Hellfire Rounds, which may be fire from any bolt weapons. These weapons act exactly as usual except they wound any opponent on a 2+ regardless of Toughness. </description>
+          <description>All Anphelion Veterans are equipped with Hellfire Rounds, which may be fire from any bolt weapons. These weapons act exactly as usual except they wound any opponent on a 2+ regardless of Toughness.</description>
         </rule>
       </rules>
     </selectionEntry>
@@ -5071,11 +5062,149 @@
       <categoryLinks>
         <categoryLink targetId="a8a7-7a4b-5f7e-2138" id="ea36-a154-9437-2fe6" primary="true" name="HQ"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Carrab Culln" hidden="false" id="3dee-e8f6-34fa-8d93">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="738a-9bbb-55a3-b469-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="738a-9bbb-55a3-b469-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Carrab Culln" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="c9e5-aaa2-d387-5d7d">
+              <characteristics>
+                <characteristic name="WS" typeId="c704-6128-f143-935a">6</characteristic>
+                <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
+                <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
+                <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
+                <characteristic name="W" typeId="4dc2-c603-0bc5-0561">4</characteristic>
+                <characteristic name="I" typeId="eeda-4fb4-901e-b70d">5</characteristic>
+                <characteristic name="A" typeId="abbf-0d11-fd86-d938">4</characteristic>
+                <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
+                <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="The Blade of the Scorpion" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="5a0a-f7d9-9423-9724">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">User or User x2</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">1</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Master-Crafted; Choose to use as Power Weapon or Power First at the beginning of each assault phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Terminator Armour" id="88d0-1961-72f3-1365" hidden="false" type="rule" targetId="fe7a-62df-712a-5bc5"/>
+            <infoLink name="Iron Halo" id="12d1-0eab-fceb-1cf7" hidden="false" type="rule" targetId="c214-19e6-edea-0f81"/>
+            <infoLink name="Master-crafted Weapons" id="36fc-c1b7-07d6-d352" hidden="false" type="rule" targetId="bfa6-639a-4ff4-e20e"/>
+            <infoLink name="Storm Bolter" id="3749-9e9d-5e8b-0d7b" hidden="false" type="profile" targetId="4c6c-9de1-00a8-8016">
+              <modifiers>
+                <modifier type="set" value="Master-Crafted Storm Bolter" field="name"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Purity Seals" id="2d35-617a-8497-e691" hidden="false" type="rule" targetId="8fca-253c-bbf8-9510"/>
+            <infoLink name="Independent Character" id="75d1-e848-653a-8529" hidden="false" type="rule" targetId="4a60-7f7e-c37f-a4d6"/>
+          </infoLinks>
+          <rules>
+            <rule name="Proud to Live, Proud to Die, Hard to Kill" id="a519-8b25-8783-2353" hidden="false">
+              <description>Culln does not suffer from the Instant Death rule. When suffering a wound that would normally cause Instant Death, take only a single wound instead.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="200"/>
+      </costs>
+      <modifiers>
+        <modifier type="add" value="Lord High Commander Carrab Culln cannot be taken in a force less than 1500pts." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="96a3-af4c-4d51-78a5" shared="true" includeChildSelections="true"/>
+            <condition type="lessThan" value="1500" field="4ed5-2f92-9abc-2870" scope="force" childId="any" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Retinue" id="8a1e-3193-0d5e-e65e" hidden="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3479-2259-0d55-2cc8"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Red Scorpions Honour Guard" hidden="false" id="515b-cda0-c0aa-7235" type="selectionEntry" targetId="1ee9-959f-be8c-48eb"/>
+            <entryLink import="true" name="Command Squad" hidden="false" id="c161-ab42-e981-d3b1" type="selectionEntry" targetId="bc53-c50d-f840-ebaa"/>
+            <entryLink import="true" name="Terminator Command Squad" hidden="false" id="76ae-7829-f732-db2f" type="selectionEntry" targetId="1ddf-3caf-c789-7fce"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Magister Sevrin Loth" hidden="false" id="3c0d-7179-47d4-cce3">
       <categoryLinks>
         <categoryLink targetId="a8a7-7a4b-5f7e-2138" id="9da6-bf66-3a83-a7f0" primary="true" name="HQ"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="Magister Sevrin Loth cannot be taken in a force less than 1500pts." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="3c0d-7179-47d4-cce3" shared="true" includeChildSelections="true"/>
+            <condition type="lessThan" value="1500" field="4ed5-2f92-9abc-2870" scope="force" childId="any" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Retinue" id="e0fb-da2f-2c8b-ab0d" hidden="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eea9-7d6e-2adf-b031"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Red Scorpions Honour Guard" hidden="false" id="3561-c100-e759-4f23" type="selectionEntry" targetId="1ee9-959f-be8c-48eb"/>
+            <entryLink import="true" name="Command Squad" hidden="false" id="320b-355c-b456-5bd1" type="selectionEntry" targetId="bc53-c50d-f840-ebaa"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Sevrin Loth" hidden="false" id="6cb3-b0b8-2930-a1e6">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2d05-84f4-50fa-e3e7-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d05-84f4-50fa-e3e7-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Sevrin Loth" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="69da-f9c8-b8d2-1d17">
+              <characteristics>
+                <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
+                <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
+                <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
+                <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
+                <characteristic name="W" typeId="4dc2-c603-0bc5-0561">2</characteristic>
+                <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+                <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
+                <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
+                <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Force Weapon" id="5e83-f5fe-363f-a338" hidden="false" type="profile" targetId="e5ab-52f0-b14b-e93c"/>
+            <infoLink name="Bolt Pistol" id="f82b-30ec-9892-bdc9" hidden="false" type="profile" targetId="e9ac-c779-51bb-3c9a"/>
+            <infoLink name="Purity Seals" id="1e56-7c88-2940-903a" hidden="false" type="rule" targetId="8fca-253c-bbf8-9510"/>
+            <infoLink name="Frag Grenades" id="4990-c15c-829b-f630" hidden="false" type="profile" targetId="9dd4-e950-2419-5934"/>
+            <infoLink name="Krak Grenades" id="ea40-f6d1-54ff-be07" hidden="false" type="profile" targetId="9c1b-bf93-059b-27f5"/>
+            <infoLink name="Psychic Hood" id="72a6-6d63-442b-a72d" hidden="false" type="rule" targetId="d637-ddb3-5ed3-bee8"/>
+            <infoLink name="Smite" id="2925-1514-b912-9ebc" hidden="false" type="profile" targetId="c4fd-c9a0-298c-1f66"/>
+            <infoLink name="Independent Character" id="1058-698b-7dd0-de06" hidden="false" type="rule" targetId="4a60-7f7e-c37f-a4d6"/>
+          </infoLinks>
+          <rules>
+            <rule name="The Armour of Selket" id="47ef-ac62-9be0-c018" hidden="false">
+              <description>The Armour of Selket is a suit of Artificer armour that incorporates a Psychic Hood. In addition, at the start of his turn Sevrin&apos;s 2+ armour save becomes a 2+ invulnerable save by passing a psychic test until the beginning of Sevrin&apos;s next turn.</description>
+            </rule>
+            <rule name="Master Psyker" id="26a9-ccce-c27a-d513" hidden="false">
+              <description>Sevrin knows Smite, Weaken Resolve, and two random Minor Psychic Powers.</description>
+            </rule>
+            <rule name="Weaken Resolve" id="05d5-65d3-5046-f583" hidden="false">
+              <description>Sevrin may attempt to use Weaken Resolve psychic power when an enemy unit with a model within 12&quot; of him has to take a Morale check. If he passes the Psychic test then the enemy unit must take is Morale Check using 3D6, rather than 2D6. This power may only be used once per player turn.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="180"/>
+      </costs>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Fire Angels Independent Techmarine Covenant" hidden="false" id="263d-3bcd-b65b-3c94">
       <categoryLinks>
