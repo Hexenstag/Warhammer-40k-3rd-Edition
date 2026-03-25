@@ -4822,7 +4822,72 @@
     <selectionEntry type="unit" import="true" name="Knight-Captain Elam Courbray" hidden="false" id="2773-0839-f8bd-7626">
       <categoryLinks>
         <categoryLink targetId="a8a7-7a4b-5f7e-2138" id="a861-a426-9f48-f622" primary="true" name="HQ"/>
+        <categoryLink targetId="b3bf-01b4-c272-3409" id="ed91-1cb1-d61e-b641" primary="false" name="Jump Pack Troops"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Elam Courbray" hidden="false" id="d092-879a-6456-2859">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ad39-6227-684d-2e6c-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ad39-6227-684d-2e6c-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Elam Courbray" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="1917-9e1b-5119-7547">
+              <characteristics>
+                <characteristic name="WS" typeId="c704-6128-f143-935a">6</characteristic>
+                <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
+                <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
+                <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
+                <characteristic name="W" typeId="4dc2-c603-0bc5-0561">3</characteristic>
+                <characteristic name="I" typeId="eeda-4fb4-901e-b70d">6</characteristic>
+                <characteristic name="A" typeId="abbf-0d11-fd86-d938">4</characteristic>
+                <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
+                <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Bolt Pistol" id="86eb-a9cc-da85-e017" hidden="false" type="profile" targetId="e9ac-c779-51bb-3c9a"/>
+            <infoLink name="Frag Grenades" id="2e32-d64f-41f6-042d" hidden="false" type="profile" targetId="9dd4-e950-2419-5934"/>
+            <infoLink name="Krak Grenades" id="0dab-8a19-c96b-c549" hidden="false" type="profile" targetId="9c1b-bf93-059b-27f5"/>
+            <infoLink name="Jump Packs" id="2f47-43a8-41c9-d3f1" hidden="false" type="rule" targetId="2563-092a-a5bc-992f"/>
+            <infoLink name="Iron Halo" id="1531-c617-1877-1089" hidden="false" type="rule" targetId="c214-19e6-edea-0f81"/>
+            <infoLink name="Purity Seals" id="60c2-d776-ed1b-4f57" hidden="false" type="rule" targetId="8fca-253c-bbf8-9510"/>
+            <infoLink name="Independent Character" id="d15f-abeb-f5c6-7887" hidden="false" type="rule" targetId="4a60-7f7e-c37f-a4d6"/>
+            <infoLink name="Power Weapon" id="3d9f-8c64-23f8-202e" hidden="false" type="profile" targetId="5774-7187-2616-dd8a">
+              <modifiers>
+                <modifier type="set" value="The Sword Excellus" field="name"/>
+                <modifier type="set" value="Master-Crafted" field="492d-1f80-b777-26f2"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink targetId="b3bf-01b4-c272-3409" id="909c-35cc-8324-a037" primary="false" name="Jump Pack Troops"/>
+          </categoryLinks>
+          <rules>
+            <rule name="Firefall" id="9058-fc64-9337-aff1" hidden="false">
+              <description>If the mission has the Deep Strike special rule then Courbray and any squad he has joined must start the game in reserve. When they arrive from Deep Strike, after scatter has been resolved, every unit (friend or foe) within 6&quot; of Courbray or his squad recieves D6 S4 AP5 hits as if from shooting. In addition, Courbray and his unit count as having a cover save of 5+ until the start of their next player turn.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="Knight-Captain Elam Courbray cannot be taken in a force less than 1500pts." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="2773-0839-f8bd-7626" shared="true" includeChildSelections="true"/>
+            <condition type="lessThan" value="1500" field="4ed5-2f92-9abc-2870" scope="force" childId="any" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Retinue" id="2f10-ec85-8df0-5c5a" hidden="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5f29-5d1f-aa05-bacf"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Command Squad" hidden="false" id="2a8d-a94e-7582-7e81" type="selectionEntry" targetId="bc53-c50d-f840-ebaa"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Lieutenant Commander Anton Narvaez" hidden="false" id="578b-a291-11c2-02e2">
       <categoryLinks>
