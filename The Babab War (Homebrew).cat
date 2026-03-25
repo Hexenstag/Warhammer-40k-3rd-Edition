@@ -916,6 +916,22 @@
             <condition type="instanceOf" value="1" field="selections" scope="self" childId="ae28-4205-b154-1e6d" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="add" value="Marines Errant Terminators are 0-1 Terminator Squad or Assault Terminator Squad." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="aeb4-ef07-abce-03ec" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="f948-e881-4bbb-7140" shared="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="1cf2-c3a5-7794-1fb2" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="1" field="632f-b821-b9fc-d39b">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="f948-e881-4bbb-7140" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <comment>Elite</comment>
       <entryLinks>
@@ -1039,6 +1055,22 @@
         <modifier type="set" value="1" field="1dac-f4d5-89d5-6ca1">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="self" childId="ae28-4205-b154-1e6d" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Marines Errant Terminators are 0-1 Terminator Squad or Assault Terminator Squad." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="aeb4-ef07-abce-03ec" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="f948-e881-4bbb-7140" shared="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="1cf2-c3a5-7794-1fb2" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="1" field="1dac-f4d5-89d5-6ca1">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="f948-e881-4bbb-7140" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2813,6 +2845,22 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="1" field="661d-186a-9388-0356">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="f948-e881-4bbb-7140" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Marines Errant may only have 0-1 Land Raider OR Land Raider Crusader " field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="c982-b62d-bd6b-a482" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="f948-e881-4bbb-7140" shared="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="1f02-23c7-3ff1-4b3a" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink targetId="aacb-8a81-62c0-3db8" id="ec0e-84e8-5758-dc2d" primary="true" name="Heavy Support"/>
@@ -2984,6 +3032,17 @@
               <conditions>
                 <condition type="greaterThan" value="0" field="selections" scope="force" childId="c982-b62d-bd6b-a482" shared="true" includeChildSelections="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="self" childId="ae28-4205-b154-1e6d" shared="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="1f02-23c7-3ff1-4b3a" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" value="Marines Errant may only have 0-1 Land Raider OR Land Raider Crusader " field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="c982-b62d-bd6b-a482" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="f948-e881-4bbb-7140" shared="true"/>
                 <condition type="greaterThan" value="0" field="selections" scope="force" childId="1f02-23c7-3ff1-4b3a" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
@@ -3437,6 +3496,7 @@
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Sons of Medusa Bionics" hidden="false" id="2038-cdaf-51a2-5211" type="selectionEntry" targetId="adf5-d47a-65d0-6548" sortIndex="1"/>
+        <entryLink import="true" name="Dark Void Elite" hidden="false" id="e864-fb55-03a3-bc1b" type="selectionEntry" targetId="c65b-a72f-a603-a737" sortIndex="3"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Scout Squad" hidden="true" id="2eae-620d-0ebd-8f75" type="selectionEntry" targetId="e811-e637-bb36-1ad7">
@@ -4768,6 +4828,70 @@
       <categoryLinks>
         <categoryLink targetId="a8a7-7a4b-5f7e-2138" id="8e01-1bc8-928d-67fa" primary="true" name="HQ"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Anton Narvaez" hidden="false" id="a3cf-ea51-5970-08d5">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="59a4-5c24-675c-6675-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="59a4-5c24-675c-6675-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Anton Narvaez" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="75c2-dd51-1094-f7f3">
+              <characteristics>
+                <characteristic name="WS" typeId="c704-6128-f143-935a">5</characteristic>
+                <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
+                <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
+                <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
+                <characteristic name="W" typeId="4dc2-c603-0bc5-0561">2</characteristic>
+                <characteristic name="I" typeId="eeda-4fb4-901e-b70d">5</characteristic>
+                <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
+                <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">9</characteristic>
+                <characteristic name="Sv" typeId="b309-5233-122f-82bb">3+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Power Weapon" id="780d-d033-45d8-c235" hidden="false" type="profile" targetId="5774-7187-2616-dd8a"/>
+            <infoLink name="Bolt Pistol" id="1d9f-5351-5d09-1d2d" hidden="false" type="profile" targetId="e9ac-c779-51bb-3c9a"/>
+            <infoLink name="Frag Grenades" id="4173-37e0-d0ae-5829" hidden="false" type="profile" targetId="9dd4-e950-2419-5934"/>
+            <infoLink name="Krak Grenades" id="7eb6-2be2-1d38-771d" hidden="false" type="profile" targetId="9c1b-bf93-059b-27f5"/>
+            <infoLink name="Independent Character" id="5a0b-1935-bf9f-30ab" hidden="false" type="rule" targetId="4a60-7f7e-c37f-a4d6"/>
+            <infoLink name="Plasma Gun" id="7546-f830-03b9-cbad" hidden="false" type="profile" targetId="112a-baea-9eeb-b1b5">
+              <modifiers>
+                <modifier type="set" value="Thundershock" field="name"/>
+                <modifier type="set" value="Master-crafted; If you roll a 1 to hit with a plasma weapon it has overheated and injured the model firing it. Make an armor save for the model, otherwise it will suffer a wound. Plasma weapons on vehicles are not affected by overheating." field="492d-1f80-b777-26f2"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Infiltrators" id="59be-2a6f-0b84-f396" hidden="false" type="rule" targetId="b4ea-750c-d9a4-e398"/>
+            <infoLink name="Move Through Cover" id="a208-a0e5-f592-30d7" hidden="false" type="rule" targetId="3a88-67df-4004-176b"/>
+          </infoLinks>
+          <rules>
+            <rule name="Actinic Halo" id="66bf-a17c-1cf0-aabe" hidden="false">
+              <description>Provides a 3+ invulnerable save. However, should this be failed and Narvaez survive, roll a D6. On a 1-3 the Halo stops functioning, on a 4+ it continues to work as usual.</description>
+            </rule>
+            <rule name="Dark Void Elite" id="c7f7-50a9-a1de-b7c3" hidden="false">
+              <description>When Narvaez is included in an army, one Tactical Squad may be chosen to represent veterans of the Chapter&apos;s long voyages into the outer-galactic darkness. Both Narvaez and this chosen squad have the Infiltrator and Move Through Cover veteran skills.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="Lieutenant Commander Anton Narvaez cannot be taken in a force less than 1000pts." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="578b-a291-11c2-02e2" shared="true" includeChildSelections="true"/>
+            <condition type="lessThan" value="1000" field="4ed5-2f92-9abc-2870" scope="force" childId="any" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="135"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Retinue" id="35fa-8e55-8965-be00" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Command Squad" hidden="false" id="8af0-4854-c952-b118" type="selectionEntry" targetId="bc53-c50d-f840-ebaa"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Red Scorpions Anphelion Veterans" hidden="false" id="dde3-f8ec-2186-6ce7">
       <categoryLinks>
@@ -7527,6 +7651,23 @@ If a model with this rule loses its final wound, roll a dice. On a 1, 2 or 3 rem
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Dark Void Elite" hidden="false" id="c65b-a72f-a603-a737">
+      <infoLinks>
+        <infoLink name="Infiltrators" id="a37b-a9ea-6c7f-4402" hidden="false" type="rule" targetId="b4ea-750c-d9a4-e398"/>
+        <infoLink name="Move Through Cover" id="d5f2-1a15-3225-39ff" hidden="false" type="rule" targetId="3a88-67df-4004-176b"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ef2f-3f89-c4bb-a33e"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="498a-ba80-507f-bb4a" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="equalTo" value="0" field="selections" scope="force" childId="578b-a291-11c2-02e2" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>
