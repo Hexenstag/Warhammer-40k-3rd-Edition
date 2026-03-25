@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="96e2-b781-50d7-3d18" name="Warhammer 40k 3rd Edition" revision="8" battleScribeVersion="2.03" authorName="Snyder" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
+<gameSystem id="96e2-b781-50d7-3d18" name="Warhammer 40k 3rd Edition" revision="9" battleScribeVersion="2.03" authorName="Snyder" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
   <comment>This is intended to create a catalog of Warhammer 40k at the point when 3rd Edition was replaced with 4th Edition. Prior 3rd Edition books may be added over time.</comment>
   <publications>
     <publication id="263c-b15e-84a3-a711" name="Codex Necrons 3rd Edition" shortName="Necrons" publisher="Codex Necrons" publicationDate="2002"/>
@@ -5105,6 +5105,15 @@ Haywire grenades may only be used against Dreadnoughts if the Dreadnought is imm
         <characteristic name="Range" typeId="deb8-131d-bdcf-1376">12&quot;</characteristic>
         <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
         <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Pistol</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
+      </characteristics>
+    </profile>
+    <profile id="4e7a-e5ed-bd58-12a7" name="Hand Flamer" hidden="false" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Template</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">3</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">5</characteristic>
         <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Pistol</characteristic>
         <characteristic name="Abilities" typeId="492d-1f80-b777-26f2"/>
       </characteristics>
