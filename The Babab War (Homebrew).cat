@@ -4771,6 +4771,75 @@
       <categoryLinks>
         <categoryLink targetId="6d25-b346-c314-6911" id="2344-cbe9-6d1d-1ee9" primary="true" name="Elites"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Corpse-Taker" hidden="false" id="4d31-2c47-56e7-c87e">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="94fd-9da8-17af-3da0"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="8b21-ce3a-18e0-7f4a"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="49"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Dark Harvest" id="e525-8db2-29a1-79cb" hidden="false" type="rule" targetId="d9fe-e333-7e7f-a280"/>
+            <infoLink name="Reductor" id="e44b-7273-ccdb-fbaf" hidden="false" type="rule" targetId="ba6f-5067-ce85-aa4b"/>
+            <infoLink name="Frag Grenades" id="8134-ba68-26b0-e7e3" hidden="false" type="profile" targetId="9dd4-e950-2419-5934"/>
+            <infoLink name="Narthecium" id="58a3-324a-7abf-3031" hidden="false" type="rule" targetId="cfad-88c2-ae81-cdc1"/>
+            <infoLink name="Target-Primus" id="3898-4315-3b7f-25ee" hidden="false" type="rule" targetId="9ba7-5182-873c-0b52"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Weapon Choice" id="749a-6d3c-20ba-1e82" hidden="false" defaultSelectionEntryId="1fd1-0ac4-6267-3b23" sortIndex="1">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Bolt Pistol and Close Combat Weapon" hidden="false" id="39a4-7905-1457-de2e">
+                  <infoLinks>
+                    <infoLink name="Bolt Pistol" id="7e12-19d6-fb3e-84fe" hidden="false" type="profile" targetId="e9ac-c779-51bb-3c9a"/>
+                    <infoLink name="Close Combat Weapon" id="08d9-3945-eb9e-ebf4" hidden="false" type="profile" targetId="46d5-85f2-d932-f0a2"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Bolter" hidden="false" id="1fd1-0ac4-6267-3b23">
+                  <infoLinks>
+                    <infoLink name="Boltgun" id="7fc0-7323-f957-9f81" hidden="false" type="profile" targetId="60bf-18fd-f6e6-6eb4"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fba1-27e0-2de4-c70c-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fba1-27e0-2de4-c70c-max"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Space Marine Weapons" id="67b8-e0fa-8734-0dea" hidden="false" sortIndex="2">
+              <entryLinks>
+                <entryLink import="true" name="Single-Handed Weapons" hidden="false" id="4b4c-4c23-972f-f8e0" type="selectionEntryGroup" targetId="de15-e12d-186e-ce84"/>
+                <entryLink import="true" name="Two-Handed Weapons" hidden="false" id="7754-3f1d-d726-ecfa" type="selectionEntryGroup" targetId="9ead-093e-2a2f-737b"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="9f3a-1856-6681-9465"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Bionics" hidden="false" id="0bf5-31d0-1924-e796" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ce0d-cc1b-b4c4-4a12"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Bionics" id="59f1-61d1-c21e-4e50" hidden="false" type="rule" targetId="93ed-72da-0689-8a2d"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <rules>
+            <rule name="Unit Attachment" id="2393-b7e4-8af8-6ac3" hidden="false">
+              <description>Each Corpse-Taker must be allocated to join a unit of any Space Marine infantry unit without jump packs prior to deployment.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="27b8-97d5-876c-12a5"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Astral Claws Space Marine Cohort" hidden="false" id="48f4-be51-19f6-5fbf">
       <categoryLinks>
