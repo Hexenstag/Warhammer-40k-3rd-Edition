@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9d6b-d195-877e-09cb" name="Space Marines (1999)" revision="15" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="9d6b-d195-877e-09cb" name="Space Marines (1999)" revision="16" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="a527-734f-2081-58cd" name="Blood Angel" hidden="false"/>
     <categoryEntry id="5709-6bb9-f3f9-07f2" name="Sanguinary Priest" hidden="false"/>
@@ -462,6 +462,16 @@ In addition to this, any model that may usually take a plasma pistol may instead
             </modifier>
           </modifiers>
         </infoLink>
+        <infoLink name="Stubborn" id="1e1e-d8ed-f5ca-0333" hidden="false" type="rule" targetId="1eb7-6961-7e16-d0b6">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="4032-b922-a004-b37c" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>Astral Claw</comment>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="83f9-31cb-b761-5564" name="HQ" hidden="false" targetId="a8a7-7a4b-5f7e-2138" primary="true"/>
@@ -566,6 +576,16 @@ In addition to this, any model that may usually take a plasma pistol may instead
               </conditions>
             </modifier>
           </modifiers>
+        </infoLink>
+        <infoLink name="Stubborn" id="d5ed-bf92-7fac-83d5" hidden="false" type="rule" targetId="1eb7-6961-7e16-d0b6">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="4032-b922-a004-b37c" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>Astral Claw</comment>
         </infoLink>
       </infoLinks>
       <categoryLinks>
@@ -672,6 +692,16 @@ In addition to this, any model that may usually take a plasma pistol may instead
               </conditions>
             </modifier>
           </modifiers>
+        </infoLink>
+        <infoLink name="Stubborn" id="e422-6495-0ae6-40d9" hidden="false" type="rule" targetId="1eb7-6961-7e16-d0b6">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="4032-b922-a004-b37c" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>Astral Claw</comment>
         </infoLink>
       </infoLinks>
       <categoryLinks>
@@ -786,6 +816,16 @@ In addition to this, any model that may usually take a plasma pistol may instead
               </conditions>
             </modifier>
           </modifiers>
+        </infoLink>
+        <infoLink name="Stubborn" id="abaf-f8ff-8db3-64f3" hidden="false" type="rule" targetId="1eb7-6961-7e16-d0b6">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="4032-b922-a004-b37c" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>Astral Claw</comment>
         </infoLink>
       </infoLinks>
       <categoryLinks>
@@ -931,6 +971,16 @@ In addition to this, any model that may usually take a plasma pistol may instead
               </conditions>
             </modifier>
           </modifiers>
+        </infoLink>
+        <infoLink name="Stubborn" id="8ad0-6845-960e-8113" hidden="false" type="rule" targetId="1eb7-6961-7e16-d0b6">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="4032-b922-a004-b37c" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <comment>Astral Claw</comment>
         </infoLink>
       </infoLinks>
       <categoryLinks>
@@ -2849,21 +2899,6 @@ In addition to this, any model that may usually take a plasma pistol may instead
                 <infoLink id="e19b-4eae-cb89-6539" name="Veteran Sergeant" hidden="false" targetId="87bf-a0f5-0c67-2bae" type="profile"/>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry id="8cac-a0ce-10b0-c613" name="Stubborn" hidden="false" collective="false" import="true" type="upgrade">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-0673-b637-2cc4" type="notInstanceOf"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac73-334a-5442-cf84" type="max"/>
-                  </constraints>
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
-                  </costs>
-                </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="false" id="bc4f-ad82-9eee-6729">
                   <infoLinks>
                     <infoLink name="Sniper Rifle" id="a8dd-f9cf-c304-bb9c" hidden="false" type="profile" targetId="3825-4a6b-6aaa-8c99"/>
@@ -2878,6 +2913,26 @@ In addition to this, any model that may usually take a plasma pistol may instead
                       </conditions>
                     </modifier>
                   </modifiers>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Stubborn" hidden="false" id="eaf5-11c1-da63-f80e" collective="false">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="4032-b922-a004-b37c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                            <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="a0a1-0673-b637-2cc4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a7cd-1dc0-ed83-0634" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
                   </costs>
@@ -3362,21 +3417,6 @@ In addition to this, any model that may usually take a plasma pistol may instead
                 <infoLink id="16b5-952e-eb61-1b97" name="Veteran Sergeant" hidden="false" targetId="87bf-a0f5-0c67-2bae" type="profile"/>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry id="5601-37f7-9116-9094" name="Stubborn" hidden="false" collective="false" import="true" type="upgrade">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-0673-b637-2cc4" type="notInstanceOf"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="840c-1ba3-f798-0a67" type="max"/>
-                  </constraints>
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
-                  </costs>
-                </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="false" id="9377-c0b5-81c1-0837">
                   <infoLinks>
                     <infoLink name="Sniper Rifle" id="1a9b-afce-77f9-dab3" hidden="false" type="profile" targetId="3825-4a6b-6aaa-8c99"/>
@@ -3391,6 +3431,26 @@ In addition to this, any model that may usually take a plasma pistol may instead
                       </conditions>
                     </modifier>
                   </modifiers>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Stubborn" hidden="false" id="bad4-370e-200f-4492" collective="false">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="4032-b922-a004-b37c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                            <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="a0a1-0673-b637-2cc4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a839-c8b0-e05c-f02e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
                   </costs>
@@ -4377,9 +4437,14 @@ In addition to this, any model that may usually take a plasma pistol may instead
                 <selectionEntry id="e3e6-c72c-b2b9-0c58" name="Stubborn" hidden="false" collective="false" import="true" type="upgrade">
                   <modifiers>
                     <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-0673-b637-2cc4" type="notInstanceOf"/>
-                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="4032-b922-a004-b37c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                            <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="a0a1-0673-b637-2cc4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </modifier>
                   </modifiers>
                   <constraints>
@@ -4712,6 +4777,16 @@ In addition to this, any model that may usually take a plasma pistol may instead
                     <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="911a-793b-d817-c409" type="atLeast"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="4032-b922-a004-b37c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="a0a1-0673-b637-2cc4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="840d-30a8-b8cb-11e3" type="max"/>
@@ -4738,6 +4813,27 @@ In addition to this, any model that may usually take a plasma pistol may instead
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="50"/>
               </costs>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Stubborn" hidden="false" id="63f9-7d05-f857-812a" collective="false">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="4032-b922-a004-b37c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="21c8-27b1-5761-0b6b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
             </selectionEntry>
             <selectionEntry id="b878-8a8a-ab46-9702" name="Space Marine Biker" hidden="false" collective="false" import="true" type="model">
               <modifiers>
@@ -5628,21 +5724,6 @@ In addition to this, any model that may usually take a plasma pistol may instead
                 <infoLink id="3896-5e86-d50c-6d1b" name="Veteran Sergeant" hidden="false" targetId="87bf-a0f5-0c67-2bae" type="profile"/>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry id="1adf-4c81-1888-c65e" name="Stubborn" hidden="false" collective="false" import="true" type="upgrade">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a0a1-0673-b637-2cc4" type="notInstanceOf"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ae1-e1f3-5f70-f55e" type="max"/>
-                  </constraints>
-                  <costs>
-                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
-                  </costs>
-                </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Sniper Rifle" hidden="false" id="85f4-10e8-27e3-1b2c">
                   <infoLinks>
                     <infoLink name="Sniper Rifle" id="d796-a8f2-5e1b-1806" hidden="false" type="profile" targetId="3825-4a6b-6aaa-8c99"/>
@@ -5657,6 +5738,26 @@ In addition to this, any model that may usually take a plasma pistol may instead
                       </conditions>
                     </modifier>
                   </modifiers>
+                  <costs>
+                    <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Stubborn" hidden="false" id="3acb-8049-52cf-f04f" collective="false">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="4032-b922-a004-b37c" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                            <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="a0a1-0673-b637-2cc4" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f846-7a9c-447b-48e6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
                   <costs>
                     <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="5"/>
                   </costs>
