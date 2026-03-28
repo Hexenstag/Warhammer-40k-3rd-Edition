@@ -71,7 +71,13 @@ Note that Fast Attack units do not have the Intractable rule.</description>
         </rule>
       </rules>
     </categoryEntry>
-    <categoryEntry name="Lamenters" id="c644-6c81-7124-50da" hidden="false"/>
+    <categoryEntry name="Lamenters" id="c644-6c81-7124-50da" hidden="false">
+      <rules>
+        <rule name="Legacy of Woe" id="a13d-401f-afb2-6a91" hidden="false">
+          <description>The Lamenter&apos;s Opponent may always choose to play an extra turn regardless of which mission is being played.</description>
+        </rule>
+      </rules>
+    </categoryEntry>
     <categoryEntry name="Executioners" id="982a-882e-5534-9a80" hidden="false"/>
     <categoryEntry name="Mantis Warriors" id="815d-1d48-c255-50b6" hidden="false"/>
     <categoryEntry name="Carcharodons" id="f1a1-0c19-d0b9-00bd" hidden="false">
