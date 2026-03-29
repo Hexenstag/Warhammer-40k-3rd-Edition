@@ -78,7 +78,19 @@ Note that Fast Attack units do not have the Intractable rule.</description>
         </rule>
       </rules>
     </categoryEntry>
-    <categoryEntry name="Executioners" id="982a-882e-5534-9a80" hidden="false"/>
+    <categoryEntry name="Executioners" id="982a-882e-5534-9a80" hidden="false">
+      <infoLinks>
+        <infoLink name="Drop Pods" id="e6d8-743e-c00c-4a94" hidden="false" type="rule" targetId="e75a-c8bc-ad0d-01af"/>
+      </infoLinks>
+      <rules>
+        <rule name="Bitter Mettle" id="32c9-a56e-5825-d003" hidden="false">
+          <description>Execution Space Marines ignore all negative modifiers to Leadership (including losing a combat, being outnumbered, etc.)</description>
+        </rule>
+        <rule name="Legacy of Ruin" id="2bb9-899b-a9f9-2bd0" hidden="false">
+          <description>Any Executioners Veteran or Command Squad members may take a boarding shield at +2pts per model. In addition, any Executioners model that may have a close combat weapon may exchange it for a Chain Axe at +1pts per model.</description>
+        </rule>
+      </rules>
+    </categoryEntry>
     <categoryEntry name="Mantis Warriors" id="815d-1d48-c255-50b6" hidden="false"/>
     <categoryEntry name="Carcharodons" id="f1a1-0c19-d0b9-00bd" hidden="false">
       <infoLinks>
@@ -2994,9 +3006,6 @@ In addition to this, any model that may usually take a plasma pistol may instead
               </modifiers>
               <infoLinks>
                 <infoLink id="6cd2-f0b3-6b90-213d" name="Veteran Space Marine" hidden="false" targetId="2729-9458-bd05-2a9c" type="profile"/>
-                <infoLink id="bd7e-9d66-ac6a-3831" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
-                <infoLink name="Bolt Pistol" id="d4ea-87b5-9e4f-920a" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
-                <infoLink name="Close Combat Weapon" id="70e3-d03d-6929-0e77" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="18"/>
@@ -3021,6 +3030,41 @@ In addition to this, any model that may usually take a plasma pistol may instead
                   </costs>
                 </selectionEntry>
               </selectionEntries>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon Choice" id="730f-ab09-f131-c8eb" hidden="false" defaultSelectionEntryId="8a1c-b738-c0eb-d11f">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Bolter" hidden="false" id="8a1c-b738-c0eb-d11f">
+                      <infoLinks>
+                        <infoLink name="Boltgun" id="bd7e-9d66-ac6a-3831" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Bolt Pistol and Close Combat Weapon" hidden="false" id="9282-836e-1ce6-4f3d">
+                      <infoLinks>
+                        <infoLink name="Bolt Pistol" id="d4ea-87b5-9e4f-920a" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+                        <infoLink name="Close Combat Weapon" id="70e3-d03d-6929-0e77" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Bolt Pistol and Chain Axe" hidden="false" id="7738-7349-102d-673a">
+                      <infoLinks>
+                        <infoLink name="Chainaxe" id="73b5-2f69-1016-83dd" hidden="false" targetId="a602-8ac2-4d83-6f46" type="profile"/>
+                        <infoLink name="Bolt Pistol" id="61b9-2424-d8fc-d108" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+                      </infoLinks>
+                      <comment>Badab War Lamenters</comment>
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditions>
+                            <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="c644-6c81-7124-50da" shared="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8dc7-98b6-afc0-bec6-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8dc7-98b6-afc0-bec6-max"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
@@ -3346,9 +3390,6 @@ In addition to this, any model that may usually take a plasma pistol may instead
               </constraints>
               <infoLinks>
                 <infoLink id="e0a0-e79b-f5c7-3496" name="Space Marine" hidden="false" targetId="9514-67fd-b082-445f" type="profile"/>
-                <infoLink id="2db7-9e84-d762-b8a7" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
-                <infoLink id="8933-241c-3547-ce10" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
-                <infoLink id="f1d2-9a61-e6e5-a00d" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
               </infoLinks>
               <entryLinks>
                 <entryLink id="4640-7885-ab4f-09e9" name="Deathwatch Veteran (Chapter Approved)" hidden="false" collective="false" import="true" targetId="340a-63dd-f55e-9d16" type="selectionEntry">
@@ -3376,6 +3417,41 @@ In addition to this, any model that may usually take a plasma pistol may instead
               <costs>
                 <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="15"/>
               </costs>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon Choice" id="c484-2388-0e98-89e8" hidden="false" defaultSelectionEntryId="6ed5-158e-8019-92db">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Bolter" hidden="false" id="910f-4386-08f6-1f5e">
+                      <infoLinks>
+                        <infoLink name="Boltgun" id="eef9-a848-1c14-1a02" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Bolt Pistol and Close Combat Weapon" hidden="false" id="6ed5-158e-8019-92db">
+                      <infoLinks>
+                        <infoLink name="Bolt Pistol" id="f992-6023-bce5-4d4f" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+                        <infoLink name="Close Combat Weapon" id="8c4f-6f46-d5af-7a1f" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Bolt Pistol and Chain Axe" hidden="false" id="b932-b455-c3aa-e04a">
+                      <infoLinks>
+                        <infoLink name="Chainaxe" id="0067-b490-c372-2199" hidden="false" targetId="a602-8ac2-4d83-6f46" type="profile"/>
+                        <infoLink name="Bolt Pistol" id="f060-8640-2c53-6a8f" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+                      </infoLinks>
+                      <comment>Badab War Lamenters</comment>
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditions>
+                            <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="c644-6c81-7124-50da" shared="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e1f4-4b1d-164f-77c5-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e1f4-4b1d-164f-77c5-max"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
             <selectionEntry id="b453-5412-0a3e-5414" name="Veteran Space Marine Sergeant" hidden="false" collective="false" import="true" type="model">
               <modifiers>
@@ -3848,6 +3924,31 @@ In addition to this, any model that may usually take a plasma pistol may instead
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Chain Axes" hidden="false" id="ab36-d6b0-f4a3-ca85" sortIndex="2">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="c644-6c81-7124-50da" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="eef4-8505-cf8b-e3c9">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="eef4-8505-cf8b-e3c9">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="360a-00e7-1b2b-196a" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="eef4-8505-cf8b-e3c9"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="d2a3-16b3-3f73-5cd3" name="Scouts" hidden="false" collective="false" import="true" defaultSelectionEntryId="bc46-544f-c92d-394f" sortIndex="3">
@@ -4261,6 +4362,26 @@ In addition to this, any model that may usually take a plasma pistol may instead
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Chain Axes" hidden="false" id="3771-c5d3-c0c1-f626" sortIndex="2">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="c644-6c81-7124-50da" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="d832-6a69-1c61-7d19">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="d832-6a69-1c61-7d19"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -5659,30 +5780,38 @@ In addition to this, any model that may usually take a plasma pistol may instead
                 <infoLink id="9477-d98f-cb69-54aa" name="Space Marine" hidden="false" targetId="9514-67fd-b082-445f" type="profile"/>
               </infoLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup id="a5eb-6243-bb91-947b" name="Weapons" hidden="false" collective="false" import="true" defaultSelectionEntryId="c305-370c-676c-f521">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42a5-ea32-235a-e307" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8070-6763-e427-4aea" type="min"/>
-                  </constraints>
+                <selectionEntryGroup name="Weapon Choice" id="12c5-4fb2-1e31-b2c7" hidden="false" defaultSelectionEntryId="6ed5-158e-8019-92db">
                   <selectionEntries>
-                    <selectionEntry id="c305-370c-676c-f521" name="Bolter" hidden="false" collective="false" import="true" type="upgrade">
+                    <selectionEntry type="upgrade" import="true" name="Bolter" hidden="false" id="c463-fc5d-7288-3f55">
                       <infoLinks>
-                        <infoLink id="03f8-273f-e1e3-1a0f" name="Boltgun" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
+                        <infoLink name="Boltgun" id="7a47-00b7-980a-be04" hidden="false" targetId="60bf-18fd-f6e6-6eb4" type="profile"/>
                       </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
-                      </costs>
                     </selectionEntry>
-                    <selectionEntry id="e60d-9196-213d-6f62" name="Bolt Pistol and Close Combat Weapon" hidden="false" collective="false" import="true" type="upgrade">
+                    <selectionEntry type="upgrade" import="true" name="Bolt Pistol and Close Combat Weapon" hidden="false" id="a3e3-c39e-343d-44c6">
                       <infoLinks>
-                        <infoLink id="6895-3a45-54d4-1aaf" name="Bolt Pistol" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
-                        <infoLink id="e8e1-95b1-6f5c-e4a7" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+                        <infoLink name="Bolt Pistol" id="8a04-61bb-c294-3358" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+                        <infoLink name="Close Combat Weapon" id="7495-349b-7f11-9ef7" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
                       </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="0"/>
-                      </costs>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Bolt Pistol and Chain Axe" hidden="false" id="50e5-6ed5-7e58-7d98">
+                      <infoLinks>
+                        <infoLink name="Chainaxe" id="80fb-52a0-91b8-8281" hidden="false" targetId="a602-8ac2-4d83-6f46" type="profile"/>
+                        <infoLink name="Bolt Pistol" id="0361-a0f3-82c2-1fb9" hidden="false" targetId="e9ac-c779-51bb-3c9a" type="profile"/>
+                      </infoLinks>
+                      <comment>Badab War Lamenters</comment>
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditions>
+                            <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="c644-6c81-7124-50da" shared="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                     </selectionEntry>
                   </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0869-3371-10dc-c229-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0869-3371-10dc-c229-max"/>
+                  </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <costs>
@@ -12160,23 +12289,13 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0f35-aa92-16e5-6316" name="Close Combat Weapon" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0f35-aa92-16e5-6316" name="Chain Axe" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cd7-0fa0-52e7-af04" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ff92-8ddc-3424-5923" type="equalTo">
-                      <comment>Termi can&apos;t equip</comment>
-                    </condition>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0ac-cb49-d41e-bba3" type="instanceOf"/>
-                    <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="f95f-54de-870f-a05e" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="3739-5420-30b9-df87" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9e9f-360a-5f93-de89" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1ddf-3caf-c789-7fce" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="e523-fad3-c10b-2fe8" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="31b1-4e0b-3c6c-f59d" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="c644-6c81-7124-50da" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -12186,7 +12305,7 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d911-de3f-aaff-ea23" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="e5fd-6252-ea06-40dd" name="Close Combat Weapon" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+            <infoLink id="e5fd-6252-ea06-40dd" name="Chainaxe" hidden="false" targetId="a602-8ac2-4d83-6f46" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1"/>
@@ -12399,6 +12518,38 @@ Add +1 to the Space Marine combat resolution socre of any assault that takes pla
               </conditions>
             </modifier>
           </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Close Combat Weapon" hidden="false" id="b8bb-43e3-81d5-d6f9" collective="false">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1cd7-0fa0-52e7-af04" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="ff92-8ddc-3424-5923" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false">
+                      <comment>Termi can&apos;t equip</comment>
+                    </condition>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d0ac-cb49-d41e-bba3" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="f95f-54de-870f-a05e" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="3739-5420-30b9-df87" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9e9f-360a-5f93-de89" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1ddf-3caf-c789-7fce" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="e523-fad3-c10b-2fe8" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="31b1-4e0b-3c6c-f59d" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cca0-bd33-b32c-c14c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Close Combat Weapon" id="37a8-c280-dc6e-49d0" hidden="false" targetId="46d5-85f2-d932-f0a2" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="1"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -13531,6 +13682,16 @@ In addition, one unit with a model within 6&quot; can re-roll any failed Assault
         <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
         <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
       </characteristics>
+    </profile>
+    <profile name="Chainaxe" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="a602-8ac2-4d83-6f46">
+      <characteristics>
+        <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+        <characteristic name="S" typeId="24d8-2110-08fa-d844">As User</characteristic>
+        <characteristic name="AP" typeId="25ce-028f-0aae-2855">-</characteristic>
+        <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+        <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Max 4+ Armour Save allowed</characteristic>
+      </characteristics>
+      <comment>Badab War Lamenters</comment>
     </profile>
   </sharedProfiles>
   <catalogueLinks>
