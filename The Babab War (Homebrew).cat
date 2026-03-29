@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="e2b4-3c55-5ca1-3f39" name="The Badab War (Homebrew)" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="7" revision="4" authorUrl="https://drive.google.com/file/d/1eqFeEO-WrMVzMxg-0bsc7G0MGgaLF3jf/view?usp=sharing" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="e2b4-3c55-5ca1-3f39" name="The Badab War (Homebrew)" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="7" revision="5" authorUrl="https://drive.google.com/file/d/1eqFeEO-WrMVzMxg-0bsc7G0MGgaLF3jf/view?usp=sharing" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Space Marines (1999)" id="c493-cd8d-5ede-c7c9" targetId="9d6b-d195-877e-09cb"/>
     <catalogueLink type="catalogue" name="Blood Angels (1998)" id="9817-8303-12a8-7269" targetId="0e77-e514-f572-9f22"/>
@@ -1612,10 +1612,36 @@
             <condition type="atLeast" value="1" field="selections" scope="force" childId="14f6-d065-6547-2032" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="1" field="13e9-bde3-b63f-4311">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="ec9e-ec41-398d-63a7" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Executioners are 0-1 Assault Bike, Bike Squadron or Scout Bike Squadron." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="982a-882e-5534-9a80" shared="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="e810-495b-702f-3735" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="greaterThan" value="0" field="selections" scope="force" childId="01fd-d7f1-ebff-d3f4" shared="true" includeChildSelections="true"/>
+                    <condition type="greaterThan" value="0" field="selections" scope="force" childId="e906-1aef-1e87-b986" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink targetId="34e2-d53c-28ab-44cf" id="6f2e-eaff-25a9-373d" primary="true" name="Fast Attack"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="13e9-bde3-b63f-4311"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Attack Bike Squadron" hidden="true" id="01fd-d7f1-ebff-d3f4" type="selectionEntry" targetId="26b2-8587-e170-87ee">
       <modifiers>
@@ -1723,10 +1749,36 @@
             <condition type="atLeast" value="1" field="selections" scope="force" childId="14f6-d065-6547-2032" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="1" field="8d89-e78f-b897-94f7">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="ec9e-ec41-398d-63a7" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Executioners are 0-1 Assault Bike, Bike Squadron or Scout Bike Squadron." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="982a-882e-5534-9a80" shared="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="01fd-d7f1-ebff-d3f4" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="greaterThan" value="0" field="selections" scope="force" childId="e906-1aef-1e87-b986" shared="true" includeChildSelections="true"/>
+                    <condition type="greaterThan" value="0" field="selections" scope="force" childId="e810-495b-702f-3735" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink targetId="34e2-d53c-28ab-44cf" id="8f94-106a-91e0-a4eb" primary="true" name="Fast Attack"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="8d89-e78f-b897-94f7"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Land Speeder Squadron" hidden="true" id="8a0a-e056-c7a8-4344" type="selectionEntry" targetId="417c-9227-f9a3-8f58">
       <modifiers>
@@ -3827,7 +3879,33 @@
             <condition type="atLeast" value="1" field="selections" scope="force" childId="14f6-d065-6547-2032" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="1" field="129d-0a5d-c8fa-2bbf">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="ec9e-ec41-398d-63a7" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Executioners are 0-1 Assault Bike, Bike Squadron or Scout Bike Squadron." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="force" childId="e906-1aef-1e87-b986" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="982a-882e-5534-9a80" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="greaterThan" value="0" field="selections" scope="force" childId="e810-495b-702f-3735" shared="true" includeChildSelections="true"/>
+                    <condition type="greaterThan" value="0" field="selections" scope="force" childId="01fd-d7f1-ebff-d3f4" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="129d-0a5d-c8fa-2bbf"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Space Marine Veteran Squad" hidden="true" id="880c-3171-95c9-c7b3" type="selectionEntry" targetId="9003-88bd-bc93-1355">
       <modifiers>
@@ -5674,7 +5752,80 @@ The unit will automatically pass any Morale checks they have to take, even if fa
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="High Chaplain Thulsa Kane" hidden="false" id="e2b3-3bd6-c54d-2230"/>
+    <selectionEntry type="unit" import="true" name="High Chaplain Thulsa Kane" hidden="false" id="e2b3-3bd6-c54d-2230">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Thulsa Kane" hidden="false" id="772f-6ff0-0336-7275">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="175"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3e8b-6297-eebb-d2cb-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3e8b-6297-eebb-d2cb-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Thulsa Kane" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="f210-68ed-ffb8-2f64">
+              <characteristics>
+                <characteristic name="WS" typeId="c704-6128-f143-935a">6</characteristic>
+                <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
+                <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
+                <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
+                <characteristic name="W" typeId="4dc2-c603-0bc5-0561">3</characteristic>
+                <characteristic name="I" typeId="eeda-4fb4-901e-b70d">4</characteristic>
+                <characteristic name="A" typeId="abbf-0d11-fd86-d938">3</characteristic>
+                <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
+                <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="The Lifetaker" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="9475-95e1-2266-86d7">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">User +1</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Master-Crafted; Two Handed; Instant Death on to wound rolls of 6</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Krak Grenades" id="b11e-f6b9-22e5-0f5a" hidden="false" type="profile" targetId="9c1b-bf93-059b-27f5"/>
+            <infoLink name="Rosarius" id="4394-82b4-a005-43da" hidden="false" type="rule" targetId="479f-929d-b531-a315"/>
+            <infoLink name="Purity Seals" id="3c46-b41d-82b9-3155" hidden="false" type="rule" targetId="8fca-253c-bbf8-9510"/>
+            <infoLink name="Frag Grenades" id="4d14-042d-f833-0b94" hidden="false" type="profile" targetId="9dd4-e950-2419-5934"/>
+            <infoLink name="Plasma Pistol" id="c64e-e4e2-ab0b-c58f" hidden="false" type="profile" targetId="7b91-b670-d042-7c88"/>
+            <infoLink name="Independent Character" id="c6d1-1843-bbfc-3296" hidden="false" type="rule" targetId="4a60-7f7e-c37f-a4d6"/>
+          </infoLinks>
+          <rules>
+            <rule name="Grehdalin&apos;s Bones" id="d85f-5db0-5195-8d43" hidden="false">
+              <description>Grendalin&apos;s Bones confer a 2+ Armour Save and when Kane would suffer from Instant Death he only takes a single wound instead.</description>
+            </rule>
+            <rule name="Honour of the Chapter" id="3369-a914-dcb9-0e8e" hidden="false">
+              <description>Both Kane and any Space Marine squad he joins automatically pass all Leadership tests they are required to make.</description>
+            </rule>
+            <rule name="Commander of Legend" id="fa35-3120-7d53-29ff" hidden="false">
+              <description>Kane counts as a Chapter Master for the Proud and the Arrogant Badab War special rule.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="High Chaplain Thulsa Kane cannot be taken in a force less than 1500pts." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="e2b3-3bd6-c54d-2230" shared="true" includeChildSelections="true"/>
+            <condition type="lessThan" value="1500" field="4ed5-2f92-9abc-2870" scope="force" childId="any" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Retinue" id="3f0e-7801-d6cf-f1ea" hidden="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cac4-e1c7-a313-8b4c"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Command Squad" hidden="false" id="901e-66ac-6e58-2a03" type="selectionEntry" targetId="bc53-c50d-f840-ebaa"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
     <selectionEntry type="unit" import="true" name="Tranquility Veterans" hidden="false" id="bb8e-6eb8-c6c0-4781">
       <categoryLinks>
         <categoryLink targetId="0ef5-5056-d52e-3cfd" id="13db-ea6d-1351-4127" primary="true" name="Troops"/>
