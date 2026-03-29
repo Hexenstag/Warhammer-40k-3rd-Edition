@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9d6b-d195-877e-09cb" name="Space Marines (1999)" revision="16" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="9d6b-d195-877e-09cb" name="Space Marines (1999)" revision="17" battleScribeVersion="2.03" library="false" gameSystemId="96e2-b781-50d7-3d18" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="a527-734f-2081-58cd" name="Blood Angel" hidden="false"/>
     <categoryEntry id="5709-6bb9-f3f9-07f2" name="Sanguinary Priest" hidden="false"/>
@@ -86,12 +86,32 @@ Note that Fast Attack units do not have the Intractable rule.</description>
         <rule name="Bitter Mettle" id="32c9-a56e-5825-d003" hidden="false">
           <description>Execution Space Marines ignore all negative modifiers to Leadership (including losing a combat, being outnumbered, etc.)</description>
         </rule>
-        <rule name="Legacy of Ruin" id="2bb9-899b-a9f9-2bd0" hidden="false">
+        <rule name="Legacy of Rann" id="2bb9-899b-a9f9-2bd0" hidden="false">
           <description>Any Executioners Veteran or Command Squad members may take a boarding shield at +2pts per model. In addition, any Executioners model that may have a close combat weapon may exchange it for a Chain Axe at +1pts per model.</description>
         </rule>
       </rules>
     </categoryEntry>
-    <categoryEntry name="Mantis Warriors" id="815d-1d48-c255-50b6" hidden="false"/>
+    <categoryEntry name="Mantis Warriors" id="815d-1d48-c255-50b6" hidden="false">
+      <infoLinks>
+        <infoLink name="Drop Pods" id="cb19-d8fb-be2a-4a61" hidden="false" type="rule" targetId="e75a-c8bc-ad0d-01af"/>
+      </infoLinks>
+      <rules>
+        <rule name="Shadow Killers" id="2b14-fb73-01c6-8c74" hidden="false">
+          <description>Mantis Warrior infantry units in Power or Artificer Armour gain the Move Through Cover Veteran Skill at no additional cost. Roll an extra D6 when moving through difficult terrain. 
+
+</description>
+        </rule>
+        <rule name="Ambush" id="8b5e-fbb0-36b3-7ca8" hidden="false">
+          <description>If a Mantis Warrior squad which has the majority of its unit in cover completes a charge move, they gain +1 WS and +1 Initiative for the remainder of that Assault Phase.</description>
+        </rule>
+        <rule name="Expansive Airwing" id="9351-54d5-43b6-fee9" hidden="false">
+          <description>Any Mantis Warriors vehicle that is arriving from reserves may enter from either their normal deployment edge, or from the sides of the board on their controlling player&apos;s table half.</description>
+        </rule>
+        <rule name="Children of Prophecy" id="b324-3ed8-6a9e-f200" hidden="false">
+          <description>Mantis Warriors have a Strategy Rating of 4 and may re-roll their dice to see who takes first turn.</description>
+        </rule>
+      </rules>
+    </categoryEntry>
     <categoryEntry name="Carcharodons" id="f1a1-0c19-d0b9-00bd" hidden="false">
       <infoLinks>
         <infoLink name="Drop Pods" id="c846-07d6-e7b2-08ad" hidden="false" type="rule" targetId="e75a-c8bc-ad0d-01af"/>
