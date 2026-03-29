@@ -3048,6 +3048,7 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="Land Raider Crusader" field="name"/>
       </modifiers>
       <categoryLinks>
         <categoryLink targetId="aacb-8a81-62c0-3db8" id="ad17-0cc7-0be6-e851" primary="true" name="Heavy Support"/>
@@ -3393,6 +3394,7 @@
             <condition type="atLeast" value="1" field="selections" scope="force" childId="b246-18f2-96a4-e9a3" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="Furioso Dreadnought" field="name"/>
       </modifiers>
     </entryLink>
     <entryLink import="true" name="Space Marine Tactical Squad" hidden="true" id="25f0-d270-0d17-211d" type="selectionEntry" targetId="2a63-ef79-7e7a-03aa">
@@ -3659,6 +3661,7 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="Baal Predator" field="name"/>
       </modifiers>
     </entryLink>
     <entryLink import="true" name="Dreadnought" hidden="true" id="4156-abe3-745d-a40c" type="selectionEntry" targetId="3f7e-ad94-b024-1a57">
@@ -5595,7 +5598,82 @@ The unit will automatically pass any Morale checks they have to take, even if fa
         <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="100"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Lord Malakim Phoros" hidden="false" id="868b-4945-a832-522b"/>
+    <selectionEntry type="unit" import="true" name="Lord Malakim Phoros" hidden="false" id="868b-4945-a832-522b">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Malakim Phoros" hidden="false" id="0064-870f-0f51-425f">
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="195"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0790-0705-479b-9ee2-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0790-0705-479b-9ee2-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Malakim Phoros" typeId="1e16-2bd8-7cad-379b" typeName="Unit" hidden="false" id="50ab-424e-cf06-08d5">
+              <characteristics>
+                <characteristic name="WS" typeId="c704-6128-f143-935a">6</characteristic>
+                <characteristic name="BS" typeId="7928-3a9b-6080-ed95">5</characteristic>
+                <characteristic name="S" typeId="df03-6292-d3f5-f778">4</characteristic>
+                <characteristic name="T" typeId="e5f6-94c4-de8c-5fa8">4</characteristic>
+                <characteristic name="W" typeId="4dc2-c603-0bc5-0561">3</characteristic>
+                <characteristic name="I" typeId="eeda-4fb4-901e-b70d">5</characteristic>
+                <characteristic name="A" typeId="abbf-0d11-fd86-d938">4</characteristic>
+                <characteristic name="Ld" typeId="f47e-b15a-8f58-703c">10</characteristic>
+                <characteristic name="Sv" typeId="b309-5233-122f-82bb">2+</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Glaive Encarmine" typeId="b399-8a1b-bf0b-c5b7" typeName="Weapon" hidden="false" id="7700-05cc-ff56-417d">
+              <characteristics>
+                <characteristic name="Range" typeId="deb8-131d-bdcf-1376">Melee</characteristic>
+                <characteristic name="S" typeId="24d8-2110-08fa-d844">User +1</characteristic>
+                <characteristic name="AP" typeId="25ce-028f-0aae-2855">2</characteristic>
+                <characteristic name="Type" typeId="d3f6-19e8-ac9e-ae13">Melee</characteristic>
+                <characteristic name="Abilities" typeId="492d-1f80-b777-26f2">Two-Handed</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Artificer Armor" id="868e-daff-d2b4-f349" hidden="false" type="rule" targetId="7a02-cc04-9d97-3493"/>
+            <infoLink name="Iron Halo" id="08ac-7679-c940-8ed5" hidden="false" type="rule" targetId="c214-19e6-edea-0f81"/>
+            <infoLink name="Purity Seals" id="be39-7e4b-3aba-9e57" hidden="false" type="rule" targetId="8fca-253c-bbf8-9510"/>
+            <infoLink name="Frag Grenades" id="a441-4b57-6141-d9e9" hidden="false" type="profile" targetId="9dd4-e950-2419-5934"/>
+            <infoLink name="Krak Grenades" id="993e-1924-b046-9d81" hidden="false" type="profile" targetId="9c1b-bf93-059b-27f5"/>
+            <infoLink name="Inferno Pistol" id="dfda-1474-d459-659e" hidden="false" type="profile" targetId="72e3-b413-6f5e-4a98">
+              <modifiers>
+                <modifier type="set" value="Catechist" field="name"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Independent Character" id="5f76-1929-2e8d-74f9" hidden="false" type="rule" targetId="4a60-7f7e-c37f-a4d6"/>
+          </infoLinks>
+          <rules>
+            <rule name="Rage unto Death" id="2086-0bd8-ab37-a287" hidden="false">
+              <description>Once Phoros has lost one or more wounds he gains +1 Strength and +1 Attack. In addition, once he has lost one or more wounds he must attempt to charge whenever possible and must always sweeping advance and consolidate toward the nearest enemy models within Line of Sight.</description>
+            </rule>
+            <rule name="Lord of Ruin" id="935e-e314-97ae-466a" hidden="false">
+              <description>Any Lamenters unit Phoros joins automatically pass any Pinning or Morale checks they are required to take. Any enemy units that lose a combat that involves Phoros must re-roll successful Morale checks.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Retinue" id="8291-3d1b-6353-9204" hidden="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="35d6-a7aa-7389-90dd"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Blood Angels Honour Guard" hidden="false" id="5d80-561f-885b-024c" type="selectionEntry" targetId="6d94-fc5b-d9d5-ca26"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <modifiers>
+        <modifier type="add" value="Magister Sevrin Loth cannot be taken in a force less than 1500pts." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="868b-4945-a832-522b" shared="true" includeChildSelections="true"/>
+            <condition type="lessThan" value="1500" field="4ed5-2f92-9abc-2870" scope="force" childId="any" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
     <selectionEntry type="unit" import="true" name="High Chaplain Thulsa Kane" hidden="false" id="e2b3-3bd6-c54d-2230"/>
     <selectionEntry type="unit" import="true" name="Tranquility Veterans" hidden="false" id="bb8e-6eb8-c6c0-4781">
       <categoryLinks>
@@ -6117,7 +6195,7 @@ The unit will automatically pass any Morale checks they have to take, even if fa
         <categoryLink targetId="a8a7-7a4b-5f7e-2138" id="9da6-bf66-3a83-a7f0" primary="true" name="HQ"/>
       </categoryLinks>
       <modifiers>
-        <modifier type="add" value="Magister Sevrin Loth cannot be taken in a force less than 1500pts." field="error">
+        <modifier type="add" value="Lord Malakim Phoros cannot be taken in a force less than 1500pts." field="error">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="3c0d-7179-47d4-cce3" shared="true" includeChildSelections="true"/>
             <condition type="lessThan" value="1500" field="4ed5-2f92-9abc-2870" scope="force" childId="any" shared="true" includeChildSelections="true"/>
