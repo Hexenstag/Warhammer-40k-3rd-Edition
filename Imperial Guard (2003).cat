@@ -5618,6 +5618,9 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="27a0-2371-6160-4e10"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="4ed5-2f92-9abc-2870" value="25"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
